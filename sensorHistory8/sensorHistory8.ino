@@ -293,7 +293,7 @@ void incrementRate() {
 
 
 void incrementState() {
-  state = (state + 1) % 6;
+  state = (state + 1) % 7;
   showScreen = 1;
   switch (state) {
     case 1:

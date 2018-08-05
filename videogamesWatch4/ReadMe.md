@@ -6,7 +6,7 @@ The first face shows space invaders with the score as the time and battery life 
 
 Click the top right button to go to asteroids with score as the time.
 
-![Alt Text](asteroids.gif)
+![Alt Text](IMG_02712.gif)
 
 Click the button again to go to etch a sketch.  Just move your wrist around to control the direction of the drawing tool.
 

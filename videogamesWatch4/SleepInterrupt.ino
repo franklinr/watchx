@@ -283,6 +283,9 @@ void interruptSleep()         // here we put the arduino to sleep
 
   // turn everything back on
   power_adc_enable(); // ADC converter
+  
+  batteryLevel = getBatteryPercent();
+
   /* power_spi_enable(); // SPI
     power_usart0_enable(); // Serial (USART)
     power_timer0_enable(); // Timer 0

@@ -16,4 +16,5 @@ Click the button again and you will get to asteroids which you can play by rolli
 
 The bottom right button will wake from sleep and clear screen during etch a sketch.  Sleep code has been improved to disable ADC.
 
-
+You will need this library.  You should be able to download it directly or within the arduino library.
+https://github.com/NicoHood/PinChangeInterrupt

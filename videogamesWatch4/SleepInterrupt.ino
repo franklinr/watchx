@@ -93,11 +93,13 @@ void showTime(int colon) {
 }
 
 void showDate() {
-  display.setCursor(0, 10);
-  display.print(presTime.year());
-  display.print(F("/"));
+  display.setCursor(0, 54);
+//  display.setCursor(100, 0);
+//  display.print(presTime.year());
+//  display.print(F("/"));
   display.print(presTime.month());
-  display.print(F("/"));
+   display.print(F("-"));
+  //display.setCursor(8, 54);
   display.print(presTime.day());
 }
 
@@ -229,7 +231,8 @@ void doSleep() {
      sleep mode: SLEEP_MODE_PWR_DOWN
 
   */
-  set_sleep_mode(SLEEP_MODE_PWR_DOWN);   // sleep mode is set here
+  set_sleep_mode(SLEEP_MODE_PWR_SAVE);   // need timer2 for RTC, so use power_save
+//  set_sleep_mode(SLEEP_MODE_PWR_DOWN);   // sleep mode is set here
 
   sleep_enable();          // enables the sleep bit in the mcucr register
   // so sleep is possible. just a safety pin
@@ -283,9 +286,8 @@ void interruptSleep()         // here we put the arduino to sleep
 
   // turn everything back on
   power_adc_enable(); // ADC converter
-  
-  batteryLevel = getBatteryPercent();
 
+  batteryLevel = getBatteryPercent();
   /* power_spi_enable(); // SPI
     power_usart0_enable(); // Serial (USART)
     power_timer0_enable(); // Timer 0
@@ -301,4 +303,3 @@ void sleepControl() {
     interruptSleep();
   }
 }
-

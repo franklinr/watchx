@@ -89,30 +89,30 @@ void loop() {
   }
 
   switch (state) {
-    case 0:
+    case 1:
       display.clearDisplay();
-      showTime(0);
-      showBattery();
+      showTime(1);
+      //showBattery();
+      showDate(); 
       drawInvadersGame(-1000);
       sleepControl();
       break;
-    case 1:
+    case 0:
       display.clearDisplay();
-      showTime(0);
+      showTime(1);
+      showDate(); 
       drawAsteroidsGame(-1000);
       sleepControl();
       break;
     case 2:
       runEtchASketch();
       break;
-    case 3:
-      display.clearDisplay();
-      showTime(0);
-      drawInvadersGame(0);
-      break;
     case 4:
       display.clearDisplay();
-      showTime(0);
+      drawInvadersGame(0);
+      break;
+    case 3:
+      display.clearDisplay();
       drawAsteroidsGame(0);
       break;
   }
@@ -120,6 +120,5 @@ void loop() {
   count++;
   count = count % 32766;
 }
-
 
 
